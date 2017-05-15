@@ -1,4 +1,4 @@
-
+	
 /*=============================================================
     Authour URI: www.binarycart.com
     License: Commons Attribution 3.0
@@ -33,7 +33,7 @@ body {
     margin:10px 20px 10px 0px;
     background-color:#fff!important;
     padding:10px;
-    min-height:1050px;
+    min-height:900px;
 }
 .pad-top {
     padding-top:15px;
@@ -82,7 +82,7 @@ min-height: 80px;
 .logout-spn {
     float:right;
     color:#fff;
-    font-size:25px;
+    font-size:18px;
     font-weight:800;
     margin:20px;
     margin: 10px 25px 10px 50px;
@@ -136,7 +136,7 @@ min-height: 80px;
      #page-wrapper{
                margin: 0 0 0 260px;
         padding: 15px 30px;
-        min-height: 1050px;
+        min-height: 840px;
 		
     }
 	
@@ -150,5 +150,38 @@ min-height: 80px;
 
  
 }
-
-
+.table1 input[type=submit]{
+	width:53%;
+}
+.table1 input[type]:not([type=submit]) {
+	width:100%;
+}
+.button,.title{
+	margin-bottom: 3%;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.main-page {
+	margin-top: 6em;
+	text-align:center;
+   
+}
+.main-page h1{
+	font-size: 4em;
+}
+.main-page p{
+	font-size: 1.5em;
+}
+.logo{
+	color:white;
+	margin:0px;
+	margin-left: 13px;
+	line-height: 20px;
+}
+h6.logo{
+	margin-top: 15px;
+}

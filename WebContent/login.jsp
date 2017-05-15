@@ -30,12 +30,10 @@
 
 					<form action="<%=request.getContextPath()%>/checkLogin"
 						method="post">
-						<input type="text" name="username" value="USERNAME"
-							onfocus="this.value = '';"
-							onblur="if (this.value == '') {this.value = 'USERNAME';}">
-						<input type="password" name="password" value="PASSWORD"
-							onfocus="this.value = '';"
-							onblur="if (this.value == '') {this.value = 'PASSWORD';}">
+						<label>USERNAME</label>
+						<input type="text" name="username">
+						<label>PASSWORD</label>
+						<input type="password" name="password">
 						<div class="button-row">
 							<input type="submit" class="sign-in" value="Sign In" name="login"> <input
 								type="reset" class="reset" value="Reset">

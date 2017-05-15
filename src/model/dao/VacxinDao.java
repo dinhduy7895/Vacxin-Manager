@@ -20,45 +20,7 @@ public class VacxinDao {
 		conn = db.getConnection();
 	}
 
-	// public Vacxin isValMaVacxinUSer(String name, String pass){
-	// conn = db.getConnection();
-	// Vacxin vacxin = null;
-	// String query = "Select * from vacxins where vacxinname = '" + name + "'
-	// and password = '"+pass+"'";
-	// System.out.println("sql "+query);
-	// try {
-	// st = conn.createStatement();
-	// rs = st.executeQuery(query);
-	// while(rs.next()){
-	// vacxin = new
-	// Vacxin(rs.getInt("MaVacxin"),rs.getString("vacxinname"),rs.getString("password"),rs.getString("name"),rs.getInt("role"));
-	// }
-	// } catch (Exception e) {
-	// // TODO Auto-generated catch block
-	// e.printStackTrace();
-	// }
-	// return vacxin;
-	// }
-	// public boolean isExist(String vacxinname){
-	// conn = db.getConnection();
-	// Vacxin vacxin = new Vacxin();
-	// int count = 0;
-	// String query = "Select count(*) from vacxins where vacxinname = '" +
-	// vacxinname + "'";
-	// System.out.println("sql "+query);
-	// try {
-	// st = conn.createStatement();
-	// rs = st.executeQuery(query);
-	// while(rs.next()){
-	// count = rs.getInt(1);
-	// }
-	// if(count==1) return true;
-	// } catch (Exception e) {
-	// // TODO Auto-generated catch block
-	// e.printStackTrace();
-	// }
-	// return false;
-	// }
+	
 	public boolean register(String name, String gia, String mota, String brand, int somui, String[] benh) {
 		conn = db.getConnection();
 		int check = 0;

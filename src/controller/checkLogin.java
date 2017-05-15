@@ -57,8 +57,7 @@ public class checkLogin extends HttpServlet {
 			if(user != null) {
 				HttpSession session = request.getSession() ;
 				session.setAttribute("user", user);
-				RequestDispatcher rd = request.getRequestDispatcher("user_list");
-				rd.forward(request, response);
+				response.sendRedirect("welcome.jsp");
 				
 			}else{
 				RequestDispatcher rd = request.getRequestDispatcher("/login-error.jsp");

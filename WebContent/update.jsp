@@ -1,31 +1,26 @@
-<%@page import="model.bean.User"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-		<%
-		User user = (User) session.getAttribute("user");
-		if(user == null){
-			response.sendRedirect(request.getContextPath()+"/login.jsp");
-			return;
-		}
-		else{
-			out.print("welcome "+user.getName());
-		}
-	%>
+<%@include file="/layout/header.jsp" %>
+
 	<% User getUser = (User)request.getAttribute("getUser"); %>
+	<div class="title">
+	   <h2>USER MANAGER</h2>
+    </div>
 	<form action="user_edit?id=<%=user.getId() %>" method="post">
-		Username: <input type="text" name="username"  required="required" value="<%= getUser.getUsername() %>">
-		</br>Name: <input type="text" name="name"  required="required" value="<%= getUser.getName() %>">
-		</br>Password: <input type="password" name="pass"  required="required" value="<%= getUser.getPassword() %>">
-		</br>Role: <input type="text" name="role"  required="required" value="<%= getUser.getRole() %>">
-		</br> <input type="hidden" value="duy">
-		</br> <button type="submit" name="update">Update</button>
+		<div class="form-group">
+            <label>Username</label>
+            <input class="form-control" type="text" name="username"  required="required" value="<%= getUser.getUsername() %>">
+        </div>
+        <div class="form-group">
+            <label>Name</label>
+            <input class="form-control" type="text" name="name"  required="required" value="<%= getUser.getName() %>">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input class="form-control" type="password" name="pass"  required="required" value="<%= getUser.getPassword() %>">
+        </div>
+        <div class="form-group">
+            <label>Role</label>
+            <input class="form-control" type="number" name="role"  required="required" value="<%= getUser.getRole() %>">
+        </div>
+		 <button class="btn btn-primary btn-lg btn-block" type="submit" name="update">Update</button>
 	</form>
-</body>
-</html>
+<%@include file="/layout/footer.jsp" %>

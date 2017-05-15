@@ -1,5 +1,12 @@
 <%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+
 <%@page import="model.bean.User"%>
+<%@page import="model.bean.KhachHang"%>
+<%@page import="model.bean.Vacxin"%>
+<%@page import="model.bean.Benh"%>
+
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,7 +16,7 @@
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Simple Responsive Admin</title>
+<title>Vacxin Health Care</title>
 <!-- BOOTSTRAP STYLES-->
 <link href="<%=request.getContextPath()%>/assets/css/bootstrap.css"
 	rel="stylesheet" />
@@ -22,8 +29,7 @@
 <!-- GOOGLE FONTS-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans'
 	rel='stylesheet' type='text/css' />
-<link href="<%=request.getContextPath()%>/assets/css/style.css"
-	rel="stylesheet" />
+
 
 </head>
 <body>
@@ -39,39 +45,41 @@
 						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#"> <img
-						src="assets/img/logo.png" />
-					</a>
+					<div class="container-logo">
+					 	<h6 class="logo">MAKE YOURSELF HEALTHY</h6>
+						<h1 class="logo" >VACXIN CENTER</h1>
+					</div>
 				</div>
-
-				<span class="logout-spn"> <a href="#" style="color: #fff;">LOGOUT</a>
+				<span class="logout-spn"> <a href="<%=request.getContextPath()%>/Logout" style="color: #fff;">LOGOUT</a>
 
 				</span>
+				<%
+				User user = (User) session.getAttribute("user");
+				if(user == null){
+					response.sendRedirect(request.getContextPath()+"/login.jsp");
+					return;
+				}
+				else{ %>
+					<span class="logout-spn"> <a href="#" style="color: #fff;">WELCOME <%= user.getName() %></a></span>
+				<%}
+				%>
+				
 			</div>
 		</div>
 		<!-- /. NAV TOP  -->
 		<nav class="navbar-default navbar-side" role="navigation">
 		<div class="sidebar-collapse">
 			<ul class="nav" id="main-menu">
-				<li><a href="index.html"><i class="fa fa-desktop "></i>Dashboard
-						<span class="badge">Included</span></a></li>
-
-
-				<li><a href="ui.html"><i class="fa fa-table "></i>UI
-						Elements <span class="badge">Included</span></a></li>
-				<li class="active-link"><a href="blank.html"><i
-						class="fa fa-edit "></i>Blank Page <span class="badge">Included</span></a>
-				</li>
+			
 
 
 
-				<li><a href="#"><i class="fa fa-qrcode "></i>My Link One</a></li>
-				<li><a href="#"><i class="fa fa-bar-chart-o"></i>My Link
-						Two</a></li>
+				<li><a href="<%=request.getContextPath()%>/welcome.jsp"><i class="fa fa-qrcode "></i>Index</a></li>
+				<li><a href="<%=request.getContextPath()%>/user_list"><i class="fa fa-bar-chart-o"></i>Users</a></li>
 
-				<li><a href="#"><i class="fa fa-edit "></i>My Link Three </a></li>
-				<li><a href="#"><i class="fa fa-table "></i>My Link Four</a></li>
-				<li><a href="#"><i class="fa fa-edit "></i>My Link Five </a></li>
+				<li><a href="<%=request.getContextPath()%>/Vacxin_index"><i class="fa fa-edit "></i>Vacxin</a></li>
+				<li><a href="<%=request.getContextPath()%>/KhachHang_List"><i class="fa fa-table "></i>Custormers</a></li>
+				<li><a href="<%=request.getContextPath()%>/KhachHang_Payment"><i class="fa fa-edit "></i>Custormers Payment</a></li>
 			</ul>
 		</div>
 

@@ -31,11 +31,16 @@
 				<div class="content1">
 					<h2>Register Form</h2>
 					<form action="checkRegister" method="post">
-						<input type="text" name="username" value="USERNAME" required="required" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = ' USERNAME';}"> 
-						<input type="text" name="name" value="NAME" required="required" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'NAME';}">
-						<input type="password" name="pass" value="PASSWORD" required="required" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'PASSWORD';}"> 
-						<input type="password" " name="rePass" value="CONFIRM-PASSWORD" required="required" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'CONFIRM PASSWORD';}"> 
-						<input type="number" name="role" required="required" value="1" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '1';}"> 
+						<label>USERNAME</label>
+						<input type="text" name="username" required="required" > 											
+						<label>NAME</label>
+						<input type="text" name="name" required="required">
+						<label>PASSWORD</label>
+						<input type="password" name="pass" required="required" > 
+						<label>CONFIRM-PASSWORD</label>
+						<input type="password" " name="rePass" required="required" > 
+						<label>ROLE</label>
+						<input type="number" name="role" required="required" > 
 						<input type="submit" class="register" value="Register" name="register">
 					</form>
 				</div>
