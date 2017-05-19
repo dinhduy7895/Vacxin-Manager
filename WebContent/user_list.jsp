@@ -7,7 +7,18 @@
 	<div class="title">
 	   <h2>USER MANAGER</h2>
     </div>
-	<a class="button btn btn-success" href="register.jsp">Create New User</a>
+	<a class="button btn btn-success" href="create.jsp">Create New User</a>
+	<%
+		if(session.getAttribute("msg")!=null){
+	%>
+		<div class="search alert alert-success">
+                    <a class="close" href="#">&times;</a>
+                    <p><strong>SUCCESS!!! </strong><%=session.getAttribute("msg")%></p>
+		</div>
+	<%
+		session.removeAttribute("msg");
+		}
+	%>
 	<form action="search" method="post">
 	<table class="table1 table table-striped table-bordered table-hover">
 	<tr>

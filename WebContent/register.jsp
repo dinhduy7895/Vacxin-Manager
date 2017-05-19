@@ -30,6 +30,16 @@
 			<div class="log">
 				<div class="content1">
 					<h2>Register Form</h2>
+										 <%
+		if(session.getAttribute("msg")!=null){
+	%>
+		<div >
+                    <p><strong>ERROR!!!</strong><%=session.getAttribute("msg")%></p>
+		</div>
+	<%
+		session.removeAttribute("msg");
+		}
+	%>
 					<form action="checkRegister" method="post">
 						<label>USERNAME</label>
 						<input type="text" name="username" required="required" > 											
@@ -43,6 +53,7 @@
 						<input type="number" name="role" required="required" > 
 						<input type="submit" class="register" value="Register" name="register">
 					</form>
+						<h3>If you have account <a href="<%=request.getContextPath()%>/login.jsp">Click here</a> to login</h3>
 				</div>
 			</div>
 			<div class="clear"></div>

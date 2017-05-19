@@ -58,18 +58,18 @@ public class user_edit extends HttpServlet {
 				boolean check = false;
 				check = userBo.update(id,username,pass,name,role);
 				if(check == false) {
-					request.setAttribute("msg", "Update khong thanh cong");
+					session.setAttribute("msg", "Update khong thanh cong");
 					RequestDispatcher rd = request.getRequestDispatcher("/update.jsp?id="+id);
 					rd.forward(request, response);
 				}else{
-					request.setAttribute("msg", "update Thanh cong");
+					session.setAttribute("msg", "update Thanh cong");
 					RequestDispatcher rd = request.getRequestDispatcher("user_list");
 					rd.forward(request, response);
 				}
 			}
 		}
 		else {
-			response.sendRedirect("welcome.jsp");
+			response.sendRedirect("user_list.jsp");
 		}
 	}
 

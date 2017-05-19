@@ -1,6 +1,4 @@
 <%@include file="/layout/header.jsp" %>
-
-	<% User getUser = (User)request.getAttribute("getUser"); %>
 	<div class="title">
 	   <h2>USER MANAGER</h2>
     </div>
@@ -15,23 +13,27 @@
 		session.removeAttribute("msg");
 		}
 	%>
-	<form action="user_edit?id=<%=getUser.getId() %>" method="post">
+	<form action="checkRegister" method="post">
 		<div class="form-group">
             <label>Username</label>
-            <input class="form-control" type="text" name="username"  required="required" value="<%= getUser.getUsername() %>">
+            <input class="form-control" type="text" name="username"  required="required" >
         </div>
         <div class="form-group">
             <label>Name</label>
-            <input class="form-control" type="text" name="name"  required="required" value="<%= getUser.getName() %>">
+            <input class="form-control" type="text" name="name"  required="required" >
         </div>
         <div class="form-group">
             <label>Password</label>
-            <input class="form-control" type="password" name="pass"  required="required" value="<%= getUser.getPassword() %>">
+            <input class="form-control" type="password" name="pass"  required="required" >
+        </div>
+        <div class="form-group">
+            <label>Confirm-Password</label>
+            <input class="form-control" type="password" name="rePass"  required="required" >
         </div>
         <div class="form-group">
             <label>Role</label>
-            <input class="form-control" type="number" name="role"  required="required" value="<%= getUser.getRole() %>">
+            <input class="form-control" type="number" name="role"  required="required" >
         </div>
-		 <button class="btn btn-primary btn-lg btn-block" type="submit" name="update">Update</button>
+		 <button class="btn btn-primary btn-lg btn-block" type="submit" name="register">REGISTER</button>
 	</form>
 <%@include file="/layout/footer.jsp" %>

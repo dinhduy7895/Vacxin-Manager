@@ -40,7 +40,8 @@
 							<div class="clear"></div>
 						</div>
 					</form>
-
+					<h3>If you don not have account <a href="<%=request.getContextPath()%>/register.jsp">Click here</a> to Register</h3>
+					
 				</div>
 			</div>
 				<div class="clear"></div>

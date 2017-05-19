@@ -61,11 +61,11 @@ public class Vacxin_add extends HttpServlet {
 			
 			if(check == true){	
 				
-				session.setAttribute("vacxin_msg", "Them moi thanh cong ");				
+				session.setAttribute("msg", "Them moi thanh cong ");				
 				RequestDispatcher rd = request.getRequestDispatcher("Vacxin_index");
 				rd.forward(request, response);
 			}else{
-				session.setAttribute("vacxin_msg", "Them moi khong  thanh cong ");				
+				session.setAttribute("msg", "Them moi khong  thanh cong ");				
 				RequestDispatcher rd = request.getRequestDispatcher("Vacxin_index");
 				rd.forward(request, response);
 			}

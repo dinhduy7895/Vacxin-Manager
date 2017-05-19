@@ -4,11 +4,22 @@
 	 ArrayList<Benh> listBenh = (ArrayList<Benh>)session.getAttribute("listBenh"); 
 	%>
 	<div class="title">
-	   <h2>VACXIN MANAGER</h2>
+	   <h2>VACCINE MANAGER</h2>
     </div>
+     <%
+		if(session.getAttribute("msg")!=null){
+	%>
+		<div class="search alert alert-danger">
+                    <a class="close" href="#">&times;</a>
+                    <p><strong>ERROR!!!</strong><%=session.getAttribute("msg")%></p>
+		</div>
+	<%
+		session.removeAttribute("msg");
+		}
+	%>
 	<form action="<%=request.getContextPath()%>/Vacxin_add" method="post">
 		<div class="form-group">
-            <label>Vacxin's Name</label>
+            <label>Vaccine's Name</label>
             <input class="form-control" type="text" name="name"  required="required" >
         </div>
         <div class="form-group">
@@ -20,11 +31,11 @@
             <input class="form-control" type="text" name="mota"  required="required" >
         </div>
         <div class="form-group">
-            <label>Vacxin's Price</label>
+            <label>Vaccine's Price</label>
             <input class="form-control" type="text"" name="gia"  required="required" >
         </div>
         <div class="form-group">
-            <label>Brand Of Vacxin</label>
+            <label>Brand Of Vaccine</label>
             <input class="form-control" type="text" name="brand"  required="required" >
         </div>
         <div class="form-group">

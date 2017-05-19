@@ -125,6 +125,7 @@ h1 {
 }
 .log {
 	width:75%;
+	min-height:750px;
 	margin:0 auto;
 }
 .content1 {
@@ -177,10 +178,18 @@ h1 {
 	font-family: 'Muli', sans-serif;
 	border-radius: 4px;
 }
+.content1 a {
+	color : red;
+	font-weight: bold;
+	
+}
+.content1 h3 {
+	font-size: 1.5em;
+	margin-top: 5%;
+}
 .button-row {
 	width:100%;
 	margin-top:5%;
-	padding-bottom:40px;
 }
 .sign-in {
 	padding:10px;
@@ -229,69 +238,7 @@ h1 {
 	background-color:#791F16;
 	color:#fff;	
 }
-.content2 {
-	width:48%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.21);
-    float:right;
-	padding: 30px 0 70px;
-    border-radius: 0px;
-}
-.content2 input[type="text"] {
-	padding:10px 40px 10px 10px;
-	width:70%;
-	border:1px solid white;
-	color:#fff; 
-	text-align:left;
-	outline:none;
-	font-size:18px;
-	background:url(../img/person.png) no-repeat 440px 10px;
-	margin-top:5%;
-	font-weight: 300;
-	font-family: 'Muli', sans-serif;
-	border-radius: 4px;
-}
-.content2 input[type="tel"] {
-	padding:10px 40px 10px 10px;
-	width:70%;
-	border:1px solid white;
-	color:#fff; 
-	text-align:left;
-	outline:none;
-	font-size:18px;
-	background:url(../img/phone.png) no-repeat 440px 10px;
-	margin-top:4%;
-	font-weight: 300;
-	font-family: 'Muli', sans-serif;
-	border-radius: 4px;
-}
-.content2 input[type="email"] {
-	padding:10px 40px 10px 10px;
-	width:70%;
-	border:1px solid white;
-	color:#fff; 
-	text-align:left;
-	outline:none;
-	font-size:18px;
-	background:url(../img/mail.png) no-repeat 440px 10px;
-	margin-top:4%;
-	font-family: 'Muli', sans-serif;
-	border-radius: 4px;
-}
-.content2 input[type="password"] {
-	padding:10px 40px 10px 10px;
-	width:70%;
-	border:1px solid white;
-	color:#fff;
-	text-align:left;
-	outline:none;
-	font-size:18px;
-	background:url(../img/lock.png) no-repeat 440px 10px;
-	margin-top:4%;
-	font-weight: 300;
-	font-family: 'Muli', sans-serif;
-	border-radius: 4px;
-}
+
 .register {
 	padding:10px;
 	background-color:#4C9A39;
@@ -302,7 +249,6 @@ h1 {
 	font-weight: 300;
 	font-family: 'Nunito', sans-serif;
 	font-size:20px;
-	margin-top:7%;
 	text-transform:uppercase;
 	border-radius:4px;
 	-webkit-transition: all 0.5s ease-in-out;
@@ -1038,33 +984,7 @@ h1 {
     background-size: 9% 50%;
 	font-size: 14px;
 }
-.content2 input[type="text"] {
-	width:65%;
-	background: url(../img/person.png) no-repeat 191px 10px;
-    background-size: 9% 50%;
-	font-size: 14px;
-}
-.content2 input[type="tel"] {
-	margin-top: 6%;
-	width:65%;
-	background: url(../img/phone.png) no-repeat 191px 10px;
-    background-size: 9% 50%;
-	font-size: 14px;
-}
-.content2 input[type="email"] {
-	margin-top: 6%;
-	width:65%;
-	background: url(../img/mail.png) no-repeat 191px 10px;
-    background-size: 9% 50%;
-	font-size: 14px;
-}
-.content2 input[type="password"] {
-	margin-top: 6%;
-	width:65%;
-	background: url(../img/lock.png) no-repeat 191px 10px;
-    background-size: 9% 50%;
-	font-size: 14px;
-}
+
 .log .content1 h2, .log .content2 h2 {
     font-size: 23px;
 }
@@ -1075,6 +995,16 @@ h1 {
 .footer p {
     font-size: 14px;
 }
+}
+.login-error{
+	
+	margin: 0 2%;
+}
+.message{
+	width:100%;
+}
+.message h3{
+	margin-top: 0%;
 }
 
 	

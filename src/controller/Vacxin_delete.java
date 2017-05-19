@@ -48,11 +48,11 @@ public class Vacxin_delete extends HttpServlet {
 			boolean check = false;
 			check = vacxinBo.delete(id);
 			if(check == false ){
-				session.setAttribute("Vacxin_msg", "Xoa that bai");
+				session.setAttribute("msg", "Xoa that bai");
 				response.sendRedirect("vacxin/index.jsp");
 			}
 			else {
-			session.setAttribute("Vacxin_msg", "Xoa thanh cong");
+			session.setAttribute("msg", "Xoa thanh cong");
 			RequestDispatcher rd = request.getRequestDispatcher("Vacxin_index");
 			rd.forward(request, response);
 			}

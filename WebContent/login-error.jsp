@@ -21,8 +21,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="log">
-				<div class="content1">
-	 	login failed - <a href="login.jsp">Click here</a> to login again or <a href="register.jsp"> Register</a>
+				<div class="content1 message">
+	 	<h3 class="login-error">login failed - <a href="login.jsp">Click here</a> to login again or <a href="register.jsp"> Register</a></h3>
 	 </div>
 			</div>
 				<div class="clear"></div>

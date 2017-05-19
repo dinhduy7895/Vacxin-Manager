@@ -64,7 +64,7 @@ public class KhachHangDao {
 		String query =" SELECT KhachHang.MaKH, KhachHang.HoTen, Sum(Vacxin.GiaVacxin) AS payment FROM KhachHang "
 				+ "INNER JOIN LichSuTiemPhong on KhachHang.MaKH = LichSuTiemPhong.MaKH "
 				+ "INNER JOIN Vacxin on Vacxin.MaVacxin = LichSuTiemPhong.MaVacxin "
-				+ "GROUP BY KhachHang.HoTen,KhachHang.MaKH  ORDER BY payment DESC";
+				+ "GROUP BY KhachHang.HoTen,KhachHang.MaKH  ORDER BY payment ";
 		try{
 			st = conn.createStatement();
 			rs = st.executeQuery(query);

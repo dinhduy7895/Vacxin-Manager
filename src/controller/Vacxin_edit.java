@@ -72,11 +72,11 @@ public class Vacxin_edit extends HttpServlet {
 				check = vacxinBo.update(id,name,gia,mota,brand,somui,benh);
 				System.out.println(check);
 				if(check == false) {
-					session.setAttribute("Vacxin_msg", "Update khong thanh cong");
+					session.setAttribute("msg", "Update khong thanh cong");
 					RequestDispatcher rd = request.getRequestDispatcher("vacxin/update.jsp?id="+id);
 					rd.forward(request, response);
 				}else{
-					session.setAttribute("Vacxin_msg", "update Thanh cong");
+					session.setAttribute("msg", "update Thanh cong");
 					RequestDispatcher rd = request.getRequestDispatcher("Vacxin_index");
 					rd.forward(request, response);
 				}

@@ -205,6 +205,7 @@ public class VacxinDao {
 		if (somui != -1)
 			query = query + "and SoMui ='" + somui + "'";
 		try {
+			System.out.println(somui);
 			st = conn.createStatement();
 			rs = st.executeQuery(query);
 			while (rs.next()) {

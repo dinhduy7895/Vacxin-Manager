@@ -2,7 +2,6 @@ package controller;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -60,14 +59,13 @@ public class checkLogin extends HttpServlet {
 				response.sendRedirect("welcome.jsp");
 				
 			}else{
-				RequestDispatcher rd = request.getRequestDispatcher("/login-error.jsp");
-				rd.forward(request, response);
+				response.sendRedirect("login-error.jsp");
 			}
 		}
 		else {
 			
-			RequestDispatcher rd = request.getRequestDispatcher("/login.jsp");
-			rd.forward(request, response);
+			response.sendRedirect("login.jsp");
+		
 		}
 	}
 

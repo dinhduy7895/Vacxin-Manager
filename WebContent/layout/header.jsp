@@ -16,7 +16,7 @@
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Vacxin Health Care</title>
+<title>Vaccine Health Care</title>
 <!-- BOOTSTRAP STYLES-->
 <link href="<%=request.getContextPath()%>/assets/css/bootstrap.css"
 	rel="stylesheet" />
@@ -47,7 +47,7 @@
 					</button>
 					<div class="container-logo">
 					 	<h6 class="logo">MAKE YOURSELF HEALTHY</h6>
-						<h1 class="logo" >VACXIN CENTER</h1>
+						<h1 class="logo" >VACCINE CENTER</h1>
 					</div>
 				</div>
 				<span class="logout-spn"> <a href="<%=request.getContextPath()%>/Logout" style="color: #fff;">LOGOUT</a>
@@ -77,7 +77,7 @@
 				<li><a href="<%=request.getContextPath()%>/welcome.jsp"><i class="fa fa-qrcode "></i>Index</a></li>
 				<li><a href="<%=request.getContextPath()%>/user_list"><i class="fa fa-bar-chart-o"></i>Users</a></li>
 
-				<li><a href="<%=request.getContextPath()%>/Vacxin_index"><i class="fa fa-edit "></i>Vacxin</a></li>
+				<li><a href="<%=request.getContextPath()%>/Vacxin_index"><i class="fa fa-edit "></i>Vaccine</a></li>
 				<li><a href="<%=request.getContextPath()%>/KhachHang_List"><i class="fa fa-table "></i>Custormers</a></li>
 				<li><a href="<%=request.getContextPath()%>/KhachHang_Payment"><i class="fa fa-edit "></i>Custormers Payment</a></li>
 			</ul>
